@@ -14,6 +14,12 @@ function App() {
     .catch((error) => console.error('Error fetching users:', error));
   }, []);
 
+  const handleAddUser = () => {
+    if (newUser.trim()) {
+      
+    }
+  }
+
   return (
     <div className="App">
       <h1>User List</h1>
@@ -24,7 +30,7 @@ function App() {
           value={newUser}
           onChange={(e) => setNewUser(e.target.value)} 
         />
-        <button>Add User</button>
+        <button onClick={handleAddUser}>Add User</button>
       </div>
       <ul>
         {users.map((user) => (

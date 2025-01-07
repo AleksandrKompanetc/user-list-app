@@ -26,6 +26,13 @@ function App() {
         />
         <button>Add User</button>
       </div>
+      <ul>
+        {users.map((user) => (
+          <li key={user.id}>
+            {user.name} <button>Delete</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

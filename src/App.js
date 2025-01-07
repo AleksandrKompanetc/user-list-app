@@ -25,6 +25,10 @@ function App() {
     }
   }
 
+  const handleDeleteUser = (id) => {
+    setUsers(users.filter((user) => user.id !== id))
+  }
+
   return (
     <div className="App">
       <h1>User List</h1>
@@ -40,7 +44,7 @@ function App() {
       <ul>
         {users.map((user) => (
           <li key={user.id}>
-            {user.name} <button>Delete</button>
+            {user.name} <button onClick={() => handleDeleteUser(user.id)}>Delete</button>
           </li>
         ))}
       </ul>

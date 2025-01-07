@@ -16,7 +16,12 @@ function App() {
 
   const handleAddUser = () => {
     if (newUser.trim()) {
-      
+      const newUserObject = {
+        id: Date.now(),
+        name: newUser,
+      }
+      setUsers([...users, newUserObject]);
+      setNewUser('');
     }
   }
 

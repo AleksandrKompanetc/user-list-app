@@ -44,7 +44,24 @@ function App() {
       <ul className='user-list'>
         {users.map((user) => (
           <li key={user.id} className='user-item'>
-            {user.name} <button onClick={() => handleDeleteUser(user.id)} className='delete-button'>Delete</button>
+            {editingUserId === user.id ? (
+              <div className='edit-container'>
+                <input 
+                  type="text"
+                  value={editingUserName}
+                  onChange={(e) => setEditingUserName(e.target.value)}
+                />
+                <button onClick={handleSaveEdit} className='save-button'>Save</button>
+                <button onClick={handleCancelEdit} className='cancelEdit'>Cancel</button>
+              </div>
+            ) : (
+              <>
+                {user.name}
+                <button onClick={() => handleEditUser(user.id)} className='edit-button'>Edit</button>
+                <button onClick={() => handleDeleteUser(user.id)} className='delete-button'>Delete</button>
+              </>
+            )}
+            {/* {user.name} <button onClick={() => handleDeleteUser(user.id)} className='delete-button'>Delete</button> */}
           </li>
         ))}
       </ul>

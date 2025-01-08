@@ -5,6 +5,8 @@ import './App.css';
 function App() {
   const [users, setUsers] = useState([]);
   const [newUser, setNewUser] = useState('');
+  const [editingUserId, setEditingUserId] = useState(null);
+  const [editingUserName, setEditingUserName] = useState("");
 
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')

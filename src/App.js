@@ -39,6 +39,12 @@ function App() {
     }
   } 
 
+  const handleSaveEdit = () => {
+    setUsers(users.map((user) => (user.id === editingUserId ? {...user, name: editingUserName} : user)));
+    setEditingUserId(null);
+    setEditingUserName("");
+  }
+
   return (
     <div className="App">
       <h1>User List</h1>

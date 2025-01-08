@@ -45,6 +45,11 @@ function App() {
     setEditingUserName("");
   }
 
+  const handleCancelEdit = () => {
+    setEditingUserId(null);
+    setEditingUserName("");
+  }
+
   return (
     <div className="App">
       <h1>User List</h1>

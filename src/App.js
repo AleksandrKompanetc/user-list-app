@@ -32,19 +32,19 @@ function App() {
   return (
     <div className="App">
       <h1>User List</h1>
-      <div>
+      <div className='input-container'>
         <input 
           type="text"
           placeholder='Enter new user name...'
           value={newUser}
           onChange={(e) => setNewUser(e.target.value)} 
         />
-        <button onClick={handleAddUser}>Add User</button>
+        <button onClick={handleAddUser} className='add-button'>Add User</button>
       </div>
-      <ul>
+      <ul className='user-list'>
         {users.map((user) => (
-          <li key={user.id}>
-            {user.name} <button onClick={() => handleDeleteUser(user.id)}>Delete</button>
+          <li key={user.id} className='user-item'>
+            {user.name} <button onClick={() => handleDeleteUser(user.id)} className='delete-button'>Delete</button>
           </li>
         ))}
       </ul>

@@ -31,6 +31,14 @@ function App() {
     setUsers(users.filter((user) => user.id !== id))
   }
 
+  const handleEditUser = (id) => {
+    const user = users.filter((user) => user.id === id);
+    if (user) {
+      setEditingUserId(id);
+      setEditingUserName(user.name);
+    }
+  } 
+
   return (
     <div className="App">
       <h1>User List</h1>

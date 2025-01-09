@@ -33,15 +33,33 @@
   }
 }
 
-.App {
+body {
   font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
-  margin: 20px;
 }
 
 h1 {
-  color: #333;
+  font-size: 2em;
   margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .input-container {
@@ -50,10 +68,10 @@ h1 {
 
 input {
   padding: 10px;
-  width: 250px;
+  font-size: 1em;
   margin-right: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .add-button {

@@ -122,3 +122,18 @@ input {
   background-color: #121212;
   color: #e0e0e0;
 }
+
+.dark-theme button {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+.dark-theme button:hover {
+  background-color: #333333;
+}
+
+.dark-theme input {
+  background-color: #333333;
+  color: #e0e0e0;
+  border: 1px solid #555555;
+}

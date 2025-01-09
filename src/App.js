@@ -60,6 +60,10 @@ function App() {
     setIsDarkTheme(!isDarkTheme);
   }
 
+  const handleSelectUser = (id) => {
+    const user = users.find((user) => user.id === id)
+  }
+
   const filteredUsers = users.filter((user) => user.name.toLowerCase().includes(searchQuery.toLowerCase()));
 
   return (

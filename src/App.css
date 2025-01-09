@@ -137,3 +137,52 @@ input {
   color: #e0e0e0;
   border: 1px solid #555555;
 }
+
+.theme-toggle {
+  margin-bottom: 20px;
+}
+
+.add-button {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+}
+
+.save-button {
+  background-color: #17a2b8;
+  color: #ffffff;
+}
+
+.save-button:hover {
+  background-color: #138496;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+.cancel-button:hover {
+  background-color: #5a6268;
+}

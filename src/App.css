@@ -104,3 +104,16 @@ input {
   color: #000000;
 }
 
+.light-theme button {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.light-theme button:hover {
+  background-color: #0056b3;
+}
+
+.light-theme input {
+  background-color: #ffffff;
+  color: #000000;
+}

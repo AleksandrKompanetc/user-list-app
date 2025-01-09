@@ -98,3 +98,9 @@ input {
 .delete-button:hover {
   background-color: #c82333;
 }
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+

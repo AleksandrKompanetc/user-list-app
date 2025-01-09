@@ -54,7 +54,7 @@ function App() {
   const filteredUsers = users.filter((user) => user.name.toLowerCase().includes(searchQuery.toLowerCase()));
 
   return (
-    <div className="App">
+    <div className={`App ${isDarkTheme ? "dark-theme" : "light-theme"}`}>
       <h1>User List</h1>
       <button onClick={toggleTheme} className='theme-toggle'>
         Switch to {isDarkTheme ? "Light" : "Dark"} Theme

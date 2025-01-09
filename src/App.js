@@ -61,7 +61,8 @@ function App() {
   }
 
   const handleSelectUser = (id) => {
-    const user = users.find((user) => user.id === id)
+    const user = users.find((user) => user.id === id);
+    setSelectedUser(user);
   }
 
   const filteredUsers = users.filter((user) => user.name.toLowerCase().includes(searchQuery.toLowerCase()));

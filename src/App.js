@@ -51,6 +51,8 @@ function App() {
     setEditingUserName("");
   }
 
+  const filteredUsers = users.filter((user) => user.name.toLowerCase().includes(searchQuery.toLowerCase()));
+
   return (
     <div className="App">
       <h1>User List</h1>
@@ -72,7 +74,7 @@ function App() {
         />
       </div>
       <ul className='user-list'>
-        {users.map((user) => (
+        {filteredUsers.map((user) => (
           <li key={user.id} className='user-item'>
             {editingUserId === user.id ? (
               <div className='edit-container'>

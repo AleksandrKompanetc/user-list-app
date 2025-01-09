@@ -106,6 +106,12 @@ function App() {
           </li>
         ))}
       </ul>
+      {selectedUser && (
+        <div className='user-details'>
+          <h2>User Details</h2>
+          <p></p>
+        </div>
+      )}
     </div>
   );
 }

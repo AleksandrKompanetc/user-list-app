@@ -9,6 +9,7 @@ function App() {
   const [editingUserName, setEditingUserName] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [selectedUser, setSelectedUser] = useState(null);
 
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')

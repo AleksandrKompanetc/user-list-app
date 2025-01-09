@@ -8,6 +8,7 @@ function App() {
   const [editingUserId, setEditingUserId] = useState(null);
   const [editingUserName, setEditingUserName] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')
@@ -50,6 +51,8 @@ function App() {
     setEditingUserId(null);
     setEditingUserName("");
   }
+
+  
 
   const filteredUsers = users.filter((user) => user.name.toLowerCase().includes(searchQuery.toLowerCase()));
 

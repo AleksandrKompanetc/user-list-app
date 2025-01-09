@@ -56,6 +56,9 @@ function App() {
   return (
     <div className="App">
       <h1>User List</h1>
+      <button onClick={toggleTheme} className='theme-toggle'>
+        Switch to {isDarkTheme ? "Light" : "Dark"} Theme
+      </button>
       <div className='input-container'>
         <input 
           type="text"

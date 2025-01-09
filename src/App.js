@@ -109,7 +109,8 @@ function App() {
       {selectedUser && (
         <div className='user-details'>
           <h2>User Details</h2>
-          <p></p>
+          <p><strong>Name:</strong>{selectedUser.name}</p>
+          <button onClick={() => setSelectedUser(null)} className='close-button'>Close</button>
         </div>
       )}
     </div>

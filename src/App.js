@@ -32,6 +32,9 @@ function App() {
 
   const handleDeleteUser = (id) => {
     setUsers(users.filter((user) => user.id !== id))
+    if (selectedUser && selectedUser.id === id) {
+      setSelectedUser(null);
+    }
   }
 
   const handleEditUser = (id) => {

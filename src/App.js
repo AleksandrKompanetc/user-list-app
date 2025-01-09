@@ -63,6 +63,14 @@ function App() {
         />
         <button onClick={handleAddUser} className='add-button'>Add User</button>
       </div>
+      <div className='search-container'>
+        <input 
+          type="text"
+          placeholder='Search users'
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)} 
+        />
+      </div>
       <ul className='user-list'>
         {users.map((user) => (
           <li key={user.id} className='user-item'>

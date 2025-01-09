@@ -52,7 +52,9 @@ function App() {
     setEditingUserName("");
   }
 
-  
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  }
 
   const filteredUsers = users.filter((user) => user.name.toLowerCase().includes(searchQuery.toLowerCase()));
 

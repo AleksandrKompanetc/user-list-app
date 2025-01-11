@@ -16,6 +16,7 @@ function App() {
     return savedTheme ? JSON.parse(savedTheme) : false;
   });
   const [selectedUser, setSelectedUser] = useState(null);
+  const [userToDelete, setUserToDelete] = useState(null);
 
   useEffect(() => {
     if (users.length === 0) {
@@ -52,6 +53,7 @@ function App() {
     if (selectedUser && selectedUser.id === id) {
       setSelectedUser(null);
     }
+    setUserToDelete(null);
   };
 
   const handleEditUser = (id) => {
@@ -128,7 +130,7 @@ function App() {
                   {user.name}
                 </span>
                 <button onClick={() => handleEditUser(user.id)} className="edit-button">Edit</button>
-                <button onClick={() => handleDeleteUser(user.id)} className="delete-button">Delete</button>
+                <button onClick={() => setUserToDelete(user)} className="delete-button">Delete</button>
               </>
             )}
           </li>
@@ -144,6 +146,26 @@ function App() {
           <p><strong>Phone:</strong> {selectedUser.phone || "N/A"}</p>
           <p><strong>Website:</strong> {selectedUser.website || "N/A"}</p>
           <button onClick={() => setSelectedUser(null)} className="close-button">Close</button>
+        </div>
+      )}
+
+      {userToDelete && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <p>Are you sure you want to delete <strong>{userToDelete.name}</strong>?</p>
+            <button
+              onClick={() => handleDeleteUser(userToDelete.id)}
+              className="delete-button"
+            >
+              Yes, Delete
+            </button>
+            <button
+              onClick={() => setUserToDelete(null)}
+              className="cancel-button"
+            >
+              Cancel
+            </button>
+          </div>
         </div>
       )}
     </div>

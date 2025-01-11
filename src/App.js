@@ -120,8 +120,8 @@ function App() {
           <p><strong>Name:</strong>{selectedUser.name}</p>
           <p><strong>ID:</strong>{selectedUser.id}</p>
           <p><strong>Email:</strong>{selectedUser.email || "N/A"}</p>
-          <p><strong>Phone:</strong>{selectedUser.phone}</p>
-          <p><strong>Website:</strong>{selectedUser.website}</p>
+          <p><strong>Phone:</strong>{selectedUser.phone || "N/A"}</p>
+          <p><strong>Website:</strong>{selectedUser.website || "N/A"}</p>
           <button onClick={() => setSelectedUser(null)} className='close-button'>Close</button>
         </div>
       )}
